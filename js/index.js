@@ -36,8 +36,8 @@ for (const callBtn of callBtns) {
     const number =
       callBtn.parentNode.parentNode.children[1].children[1].children[0]
         .innerText;
-     const now = new Date();
-      const time = now.toLocaleTimeString("en-US", { timeZone: "Asia/Dhaka" });
+    const now = new Date();
+    const time = now.toLocaleTimeString("en-US", { timeZone: "Asia/Dhaka" });
     const newCart = document.createElement("div");
     newCart.innerHTML = `
       <div class="bg-gray-100 rounded-lg w-[352px] py-4 pl-4 mx-6
@@ -58,6 +58,26 @@ for (const callBtn of callBtns) {
 }
 
 // copy button
+// document.getElementById("btn1").addEventListener("click", function () {
+//   const copyNum = document.getElementById("copy-num").innerText;
+//   const finalNum = Number(copyNum) + Number(1);
+//   document.getElementById("copy-num").innerText = finalNum
+// });
+
+const nums = document.getElementsByClassName("btn1");
+
+for (const num of nums) {
+  const nam =
+    num.parentNode.parentNode.children[1].children[1].children[0].innerText;
+  num.addEventListener("click", function (e) {
+    e.target;
+    const numb = document.getElementById("copy-num").innerText;
+    const finalNum = Number(numb) + Number(1);
+    document.getElementById("copy-num").innerText = finalNum;
+    alert(`The number has been copied;${nam}`)
+     navigator.clipboard.writeText(nam);
+  });
+}
 
 // clear button
 document.getElementById("clear-btn").addEventListener("click", function () {
