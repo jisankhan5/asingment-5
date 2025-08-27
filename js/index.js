@@ -20,6 +20,7 @@ for (const callBtn of callBtns) {
       alert(
         `❌You don't have enough coins!It takes at least 20 coins to make a call.`
       );
+      return;
     } 
     else {
       const parant =
