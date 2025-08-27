@@ -20,7 +20,8 @@ for (const callBtn of callBtns) {
       alert(
         `❌You don't have enough coins!It takes at least 20 coins to make a call.`
       );
-    } else {
+    } 
+    else {
       const parant =
         callBtn.parentNode.parentNode.children[1].children[0].children[1]
           .innerText;
